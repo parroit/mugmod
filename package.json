@@ -1,0 +1,45 @@
+{
+  "name": "mugmod",
+  "description": "coffeescript powered rich modules",
+  "version": "0.1.0",
+  "homepage": "https://github.com/parroit/mugmod",
+  "author": {
+      "name": "Andrea Parodi",
+      "email": "andrea@parro.it"
+  },
+  "repository": {
+      "type": "git",
+      "url": "git://github.com/parroit/mugmod.git"
+  },
+  "bugs": {
+      "url": "https://github.com/parroit/mugmod/issues"
+  },
+  "licenses": [{
+      "type": "MIT",
+      "url": "https://github.com/parroit/mugmod/blob/master/LICENSE"
+  }],
+  "main": "lib/index.coffe",
+  "engines": {
+      "node": ">= 0.10.26",
+      "npm": ">=1.4.3"
+  },
+  "keywords": [],
+  
+  "scripts": {
+    "test": "gulp test"
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "chai": "~1.9.1",
+    "coffee-script": "~1.7.1",
+    "gulp-load-plugins": "^0.5.0",
+    "gulp": "~3.6.2",
+    "gulp-mocha": "~0.4.1",
+    "gulp-coffee": "~1.4.2",
+    "gulp-util": "~2.2.14",
+    "gulp-coffeelint": "~0.3.2"
+  },
+  "keywords": []
+}
