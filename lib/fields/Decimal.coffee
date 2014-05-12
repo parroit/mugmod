@@ -8,6 +8,8 @@ class Decimal extends Field
   parse: (instance, value) ->
     instance[@name] = parseFloat( value )
 
+  get: (instance) -> instance[@name]
+
   validate: (instance) ->
     if @options.required && this.isEmpty(instance)
       return lang.current.FIELD_REQUIRED @name

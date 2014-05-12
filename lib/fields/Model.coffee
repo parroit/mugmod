@@ -13,7 +13,11 @@ class Model
   constructor: (@definition) ->
 
   newInstance: (data = {}) ->
-    
+    if ! @initialized
+      for own name,type of @definition  
+        type.name = name 
+      @initialized = true
+
     instance = {}
     for own name,type of @definition
       defineProperty instance, data, name, type

@@ -16,9 +16,14 @@ describe 'Integer', () ->
       f = new Integer('prova',42, required:true)
       instance = {}
       f.create instance
+    
     it 'stringify value', () ->
       val = f.stringify(instance)
       val.should.be.equal '42'
+
+    it 'get value', () ->
+      val = f.get(instance)
+      val.should.be.equal 42
     
     it 'parse value', () ->
       val = f.parse(instance,'17')

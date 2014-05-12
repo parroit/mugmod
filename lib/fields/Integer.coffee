@@ -7,6 +7,8 @@ class Integer extends Field
   
   parse: (instance, value) ->
     instance[@name] = parseInt( value )
+  
+  get: (instance) -> instance[@name]
 
   validate: (instance) ->
     if @options.required && this.isEmpty(instance)

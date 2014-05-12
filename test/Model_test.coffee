@@ -1,4 +1,3 @@
-
 fs = require 'fs'
 chai = require 'chai'
 should = chai.should()
@@ -6,14 +5,21 @@ Model = require '../lib/fields/Model'
 String = require '../lib/fields/String'
 Integer = require '../lib/fields/Integer'
 
-
+###
 Person = new Model(
   name: new String('name','', required:true),
   age: new Integer('age',51)
 )
+###
+
+Person = new Model(
+  name: new String(required:true),
+  age: new Integer(default:51)
+)
 
 describe 'Model', () ->
   it 'is defined', () ->
+    console.dir(Model)
     Model.should.be.a 'function'
 
   it 'create new objects', () ->

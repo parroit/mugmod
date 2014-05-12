@@ -21,6 +21,10 @@ describe 'DateField', () ->
       val = f.stringify(instance)
       val.should.be.equal '09/09/2001'
     
+    it 'get value', () ->
+      val = f.get(instance)
+      val.valueOf().should.be.equal '2001-09-09'
+
     it 'parse value', () ->
       instance.prova = null
       f.parse(instance,'2001-09-09')

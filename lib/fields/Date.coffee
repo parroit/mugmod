@@ -29,6 +29,8 @@ class Date extends Field
     else
       value.format('L')
 
+  get: (instance) -> instance[@name].format('YYYY-MM-DD')
+    
   validate: (instance) ->
     if @options.required && this.isEmpty(instance)
       return "#{@name} is required"

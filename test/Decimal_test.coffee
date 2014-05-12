@@ -17,6 +17,10 @@ describe 'Decimal', () ->
       instance = {}
       f.create instance
     
+    it 'get value', () ->
+      val = f.get(instance)
+      val.should.be.equal 42.5
+
     it 'stringify value', () ->
       val = f.stringify(instance)
       val.should.be.equal '42.5'
